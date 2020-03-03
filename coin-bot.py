@@ -5,6 +5,7 @@ import re
 import telebot
 from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from datetime import datetime
 
 API_TOKEN = "<API_KEY>"
 
@@ -42,6 +43,11 @@ def command_start(m):
         help_text += "/" + key + ": "
         help_text += commands[key] + "\n"
     bot.send_message(cid, help_text)
+
+@bot.message_handler(commands=['show'])
+def command_show(message):
+    cid = message.chat.id
+    bot.send_message(cid, "Patience! I have not learned how to do this yet! Come back next time!")
   
 # handle the "/new" command
 @bot.message_handler(commands=['new'])
@@ -74,7 +80,12 @@ def process_amount_step(message):
             bot.register_next_step_handler(message, process_amount_step)
             return
         
-        bot.send_message(cid, 'Recorded: $' + str(amount) + ' spent on {}'.format(str(choice[cid])))
+
+        # dt = datetime.utcfromtimestamp(int(message.date)+28800)).strftime('%Y-%m-%d %H:%M:%S')
+        dt = datetime.utcfromtimestamp(message.date).strftime('%Y-%m-%d')
+
+        bot.send_message(cid, 'Recorded: You spent $' + str(amount) + ' for ' + str(choice[cid]) + ' on (UTC) {}'.format(str(dt)))
+        # bot.send_message(cid, 'Record: $' + str(amount) + ' ' + str(choice[cid]) + ' on {}'.format(message.date))
        
     except Exception as e:
         bot.reply_to(message, 'oooops:' + e)

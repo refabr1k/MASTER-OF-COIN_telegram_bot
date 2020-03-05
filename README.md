@@ -22,7 +22,7 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 * `/view history`
 
 
-#For Developers
+# For Developers
 ## Data structure and persisting
 `data.json` file is loaded on every read/write action into a global dictionary, with the following json key-value structure
 ```

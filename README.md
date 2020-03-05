@@ -11,6 +11,8 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 (ideally set it up in cloud or any free FaaS)
 
 # How to use?
+## `help` help menu
+
 ## Record a new expenses
 * `/new` and select category
 * key in $ amount 
@@ -19,7 +21,7 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 * `/show` and select mode (day or month)
 
 ## View all spending history
-* `/view history`
+* `/history` to view all spending history so far
 
 
 # For Developers

@@ -22,7 +22,9 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 ## Record a new expenses
 
 * `/new` and select category
+![](/my-coin-bot/screens/new1.jpg)
 * key in $ amount 
+![](/my-coin-bot/screens/new2.jpg)
 
 ## Show spendings
 
@@ -120,9 +122,6 @@ CATEGORY, AMOUNT
 ----------------
 Food: $12.0
 ```
-
-
-
 
 
 ## todo

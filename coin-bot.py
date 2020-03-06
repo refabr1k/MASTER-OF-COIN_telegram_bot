@@ -10,6 +10,7 @@ from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
 
+API_TOKEN = "<API_KEY>"
 
 commands = {  # command description used in the "help" command
     'help'    : 'Display this menu',

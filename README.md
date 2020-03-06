@@ -1,4 +1,4 @@
-# Master Of Coin (Telegram Bot)
+# Master-Of-Coin a Telegram Bot
 
 A simple telegram bot that records and show spendings built using python (pyTelegramBotAPI). 
 
@@ -8,31 +8,39 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 
 # How to setup?
 
-1. Get api key from botfather
-2. Install the following dependencies: ... ... (todo)
-3. Run `python3 coin_bot.py`
+1. Get api key from BotFather. Simply send `/newbot` to "BotFather" in Telegram and follow the onscreen instructions to get an API key. Place this api key in `"<API_KEY>"` of `coin_bot.py` file.
+2. Install the following dependencies: `pyTelegramBotAPI` (eg. run `pip install pyTelegramBotAPI`)
+3. Create an empty `data.json` in the same directory of your `coin_bot.py`. All recorded expenses will be stored here.
+4. Run `python3 coin_bot.py`
    (ideally set it up in cloud or any free FaaS)
 
 # How to use?
 
-## Help menu and list of commands
+## Start / Help menu
 
-`help` show help menu
+* Send `/help` command show help menu
+
+![help](../../blob/master/screens/start.jpg)
 
 ## Record a new expenses
 
-* `/new` and select category
-![](/MASTER-OF-COIN_telegram_bot/screens/new1.jpg)
-* key in $ amount 
-![](/MASTER-OF-COIN_telegram_bot/screens/new2.jpg)
+* Send `/new` command and select category
+* Key in amount to record spending 
+
+![new1](../../blob/master/screens/new1.jpg) ![new2](../../blob/master/screens/new2.jpg)
+
 
 ## Show spendings
 
-* `/show` and select mode (day or month)
+* Send `/show` command and select mode (day or month)
+
+![show1](../../blob/master/screens/show1.jpg) ![show2](../../blob/master/screens/show2.jpg)
 
 ## View all spending history
 
-* `/history` to view all spending history so far
+* Send `/history` command to view all spending history so far
+
+![history](../../blob/master/screens/history.jpg)
 
 # For Developers
 

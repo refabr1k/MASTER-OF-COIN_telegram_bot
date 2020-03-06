@@ -10,7 +10,6 @@ from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
 
-API_TOKEN = "<API_TOKEN>"
 
 commands = {  # command description used in the "help" command
     'help'    : 'Display this menu',
@@ -226,7 +225,7 @@ def process_amount_step(message):
         dt = datetime.today().strftime(dateFormat+' '+timeFormat)
         dtText, catText, amtText = str(dt), str(choice[cid]), str(amount_num)
         writeJson(addUserHistory(cid,"{},{},{}".format(dtText,catText,amtText)))
-        bot.send_message(cid, 'Recorded: You spent ${} for {} on {}'.format(dtText,catText,amtText))
+        bot.send_message(cid, 'Recorded: You spent ${} for {} on {}'.format(amtText,catText,dtText))
        
     except Exception as e:
         bot.reply_to(message, 'Opps! ' + str(e))
@@ -266,6 +265,7 @@ def command_clear(message):
     else:
         clear_history_text = "I'm sorry! It appears that you do not have any spending records!"
     bot.send_message(cid, clear_history_text)
+    
     
 
 def process_feed_back(message):

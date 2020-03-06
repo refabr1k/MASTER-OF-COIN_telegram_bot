@@ -22,9 +22,9 @@ To learn python! In the process create a nice tool that I wanted: quick and easy
 ## Record a new expenses
 
 * `/new` and select category
-![](/my-coin-bot/screens/new1.jpg)
+![](/MASTER-OF-COIN_telegram_bot/screens/new1.jpg)
 * key in $ amount 
-![](/my-coin-bot/screens/new2.jpg)
+![](/MASTER-OF-COIN_telegram_bot/screens/new2.jpg)
 
 ## Show spendings
 
